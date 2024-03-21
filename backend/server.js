@@ -5,6 +5,7 @@ const { v4: uuidv4 } = require("uuid");
 const { User } = require("./db");
 const cors = require("cors");
 const JWT_SECRET = "abhishek";
+const port = process.env.port || 3000;
 app.use(cors());
 app.use(express.json());
 const mySchema = zod.object({
@@ -88,4 +89,4 @@ app.get("/", (req, res) => {
   res.json({ success: true });
 });
 
-app.listen(3000);
+app.listen(port);
