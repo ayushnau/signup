@@ -88,5 +88,5 @@ app.post("/signin", async (req, res) => {
 app.get("/", (req, res) => {
   res.json({ success: true });
 });
-
+console.log(port);
 app.listen(port);
